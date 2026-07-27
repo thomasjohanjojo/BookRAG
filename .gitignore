@@ -1,0 +1,55 @@
+# ==========================================
+# Python Runtime & Virtual Environments
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+
+.venv/
+venv/
+env/
+ENV/
+
+# ==========================================
+# API Keys & Secrets (Gemini API)
+# ==========================================
+# Never commit your GEMINI_API_KEY to Git
+.env
+.env.local
+.env.*
+!.env.example
+
+# ==========================================
+# Vector Database (ChromaDB Local Files)
+# ==========================================
+# Ignores local vector collections and SQLite databases created by ChromaDB
+chroma_db/
+chroma_data/
+.chroma/
+*.sqlite3
+
+# ==========================================
+# Model Caches (Sentence-Transformers)
+# ==========================================
+# Ignores downloaded embedding model weights from Hugging Face
+.cache/
+models/
+
+# ==========================================
+# Raw Document Storage
+# ==========================================
+# Keeps raw PDF or text files out of GitHub while preserving the folder
+data/*
+!data/.gitkeep
+*.pdf
+*.txt
+
+# ==========================================
+# IDE & Operating System Files
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
