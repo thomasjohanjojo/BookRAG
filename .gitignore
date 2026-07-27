@@ -41,8 +41,8 @@ models/
 # Keeps raw PDF or text files out of GitHub while preserving the folder
 data/*
 !data/.gitkeep
-*.pdf
-*.txt
+data/*.pdf
+data/*.txt
 
 # ==========================================
 # IDE & Operating System Files

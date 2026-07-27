@@ -1,0 +1,14 @@
+# Vector Database & Search
+chromadb>=1.0.0
+
+# Local Embedding Model Engine
+sentence-transformers>=3.0.0
+
+# Google Gemini API Client
+google-genai>=2.0.0
+
+# PDF File Parsing
+pypdf>=5.0.0
+
+# Environment Variable Loader (.env file support)
+python-dotenv>=1.0.0
