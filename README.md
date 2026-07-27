@@ -10,3 +10,8 @@ BookRAG/
 ├── 04_retriever.py
 ├── 05_generator.py
 └── main.py
+
+
+
+# Design principles followed:
+The modules all are implementations of interfaces, as per the dependency injection design pattern. 
