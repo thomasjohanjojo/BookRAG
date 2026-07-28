@@ -15,3 +15,7 @@ BookRAG/
 
 # Design principles followed:
 The modules all are implementations of interfaces, as per the dependency injection design pattern. 
+
+
+# Chunker
+The chunking strategy followed is Recursive splitting
