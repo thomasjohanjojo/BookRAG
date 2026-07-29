@@ -38,40 +38,41 @@ class RecursiveSplittingPageChunker(ChunkerAbstractBaseClass):
         # STEP 2: Reassemble snippets into overlapping chunks up to self.chunk_size
         # =========================================================================
         chunks: list[str] = []
-        current_chunk_snippets: list[str] = []
-        current_length = 0
+        proposed_chunk_snippets: list[str] = []
+        length_of_proposed_chunk_snippets = 0
 
         for snippet in snippets:
-            snippet_len = len(snippet)
+            snippet_length = len(snippet)
 
-            if current_length + snippet_len <= self.chunk_size:
-                current_chunk_snippets.append(snippet)
-                current_length += snippet_len
+            if length_of_proposed_chunk_snippets + snippet_length <= self.chunk_size:
+                proposed_chunk_snippets.append(snippet)
+                length_of_proposed_chunk_snippets += snippet_length
             else:
-                if current_chunk_snippets:
-                    chunk_str = "".join(current_chunk_snippets).strip()
-                    if chunk_str:
-                        chunks.append(chunk_str)
+                if proposed_chunk_snippets != []:
+                    individual_chunk = "".join(proposed_chunk_snippets).strip() #This line joins all the snippets together into one chunk
+                    if individual_chunk:
+                        chunks.append(individual_chunk)
 
                 # Collect trailing snippets from the previous chunk for overlap
                 overlap_buffer: list[str] = []
                 overlap_length = 0
 
-                for prev_snippet in reversed(current_chunk_snippets):
+                for prev_snippet in reversed(proposed_chunk_snippets):
                     if overlap_length + len(prev_snippet) <= self.chunk_overlap:
                         overlap_buffer.insert(0, prev_snippet)
                         overlap_length += len(prev_snippet)
                     else:
                         break
 
-                current_chunk_snippets = overlap_buffer + [snippet]
-                current_length = sum(len(s) for s in current_chunk_snippets)
+                snippet_that_was_too_big = snippet
+                proposed_chunk_snippets = overlap_buffer + [snippet_that_was_too_big]
+                length_of_proposed_chunk_snippets = sum(len(s) for s in proposed_chunk_snippets)
 
         # Flush any remaining text in the buffer
-        if current_chunk_snippets:
-            final_chunk_str = "".join(current_chunk_snippets).strip()
-            if final_chunk_str:
-                chunks.append(final_chunk_str)
+        if proposed_chunk_snippets != []:
+            leftover_individual_chunk = "".join(proposed_chunk_snippets).strip()
+            if leftover_individual_chunk != []:
+                chunks.append(leftover_individual_chunk)
 
         # =========================================================================
         # STEP 3: Pair every chunk string with its metadata dictionary
