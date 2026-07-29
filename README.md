@@ -4,12 +4,15 @@ Just a personal RAG
 
 # Project-Structure
 BookRAG/
-├── 01_chunker.py
-├── 02_embedder.py
-├── 03_vector_store.py
-├── 04_retriever.py
-├── 05_generator.py
-└── main.py
+chunker.py
+embedder.py
+vector_store.py
+retriever.py
+generator.py
+main.py
+test_chunker.py
+/Interfaces
+ChunkerAbstractBaseClass.py
 
 
 
