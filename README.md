@@ -13,6 +13,7 @@ main.py
 test_chunker.py
 /Interfaces
 ChunkerAbstractBaseClass.py
+EmbedderAbstractBaseClass.py
 
 
 
