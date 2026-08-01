@@ -27,6 +27,7 @@ chroma_db/
 chroma_data/
 .chroma/
 *.sqlite3
+test_chroma_db/
 
 # ==========================================
 # Model Caches (Sentence-Transformers)

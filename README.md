@@ -6,14 +6,18 @@ Just a personal RAG
 BookRAG/
 chunker.py
 embedder.py
-vector_store.py
+vectorStoreAndRetrieve.py
 retriever.py
 generator.py
-main.py
+main.py.
+//TESTS
 test_chunker.py
+test_embedder.py
+test_vectorStoreAndRetrieve.py
 /Interfaces
 ChunkerAbstractBaseClass.py
 EmbedderAbstractBaseClass.py
+VectorStoreAndRetrieveAbstractBaseClass.py
 
 
 
