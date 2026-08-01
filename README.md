@@ -7,7 +7,6 @@ BookRAG/
 chunker.py
 embedder.py
 vectorStoreAndRetrieve.py
-retriever.py
 generator.py
 main.py.
 //TESTS
