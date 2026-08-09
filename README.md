@@ -1,5 +1,5 @@
 # BookRAG
-Just a personal RAG
+A minimalist RAG pipeline for querying PDF books.
 
 
 # Project-Structure
