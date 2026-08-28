@@ -102,7 +102,7 @@ class BookRAGGraph:
         print("\nSearching database for relevant context...")
         
         query_embedding = self.embedder.embed([state["querry"]])[0]
-        chunks, metadatas = self.vector_store_and_retrieve.retrieveFromVectorDatabase(query_embedding, k=3)
+        chunks, metadatas = self.vector_store_and_retrieve.retrieveFromVectorDatabase(query_embedding, k=50)
         return {"retrieved_chunks_and_metadata_tuple": (chunks, metadatas)}
 
     def generate_node(self, state: BookState):
