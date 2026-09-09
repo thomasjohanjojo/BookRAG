@@ -12,3 +12,6 @@ pypdf>=5.0.0
 
 # Environment Variable Loader (.env file support)
 python-dotenv>=1.0.0
+
+# LangChain & LangGraph
+langgraph>=1.2.11

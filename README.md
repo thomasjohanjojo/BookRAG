@@ -1,5 +1,6 @@
 # BookRAG
-A minimalist RAG pipeline for querying PDF books.
+A minimalist RAG pipeline for querying PDF books. It will also:
+    - Write the results of a query into a docx file
 
 
 # Project-Structure
@@ -31,3 +32,7 @@ The chunking strategy followed is Recursive splitting
 
 # Ollama 
 Since we are using Ollama as the llm, make sure to download and install ollama. 
+
+
+# HOW TO RUN:
+To run the application, run the batch file: run_rag.bat. Make sure that ollama is properly installed and set up
