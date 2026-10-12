@@ -34,7 +34,7 @@ Similar to dependency injection, we define abstract test classes from which the 
 The chunking strategy followed is Recursive splitting
 
 # Ollama 
-Since we are using Ollama as the llm, make sure to download and install ollama. 
+Since we are using Ollama to set up the local llm, make sure to download and install ollama, and the llm being used by the generator
 
 
 # HOW TO RUN:
